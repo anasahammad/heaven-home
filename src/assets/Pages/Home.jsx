@@ -1,10 +1,13 @@
+import AllSlides from "../../Sliders/AllSlides";
 
 const Home = () => {
     return (
-        <div>
-            <h1>This is Home .....
-                
-            </h1>
+        <div className="">
+            
+        <AllSlides/>
+           
+        
+            
         </div>
     );
 };
