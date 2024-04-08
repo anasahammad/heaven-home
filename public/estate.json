@@ -1,0 +1,123 @@
+[
+    {
+      "estate_title": "Modern Single-Family Home",
+      "id": 1,
+      "segment_name": "Single-family homes",
+      "description": "Discover the epitome of contemporary living with this stunning modern single-family home. Nestled in a desirable neighborhood, this residence offers a perfect blend of style, comfort, and functionality. Step inside to find an open-concept layout flooded with natural light, accentuating the sleek design and high-end finishes throughout. The spacious living area is ideal for both relaxing and entertaining, featuring elegant hardwood floors and a cozy fireplace. The gourmet kitchen is a chef's dream, equipped with premium stainless steel appliances, quartz countertops, and ample cabinet space. Retreat to the luxurious master suite, complete with a spa-like ensuite bathroom and walk-in closet. Additional bedrooms provide plenty of space for family and guests. Outside, enjoy the privacy of the landscaped backyard, perfect for al fresco dining and outdoor gatherings. With its prime location, modern amenities, and sophisticated design, this home offers a lifestyle of luxury and convenience.",
+      "price": "$750,000",
+      "status": "sale",
+      "area": "2,500 sq ft",
+      "location": "123 Main Street, Anytown, USA",
+      "facilities": ["Spacious living room", "Gourmet kitchen", "Private backyard", "Walk-in closet", "Hardwood floors"],
+      "image": "modern_single_family_home.jpg"
+    },
+    {
+      "estate_title": "Luxury Townhouse",
+      "id": 2,
+      "segment_name": "Townhouses",
+      "description": "Indulge in upscale urban living with this luxurious townhouse located in the heart of the city. Boasting sophisticated design and premium amenities, this residence offers the ultimate in modern comfort and convenience. Step inside to discover an elegant interior featuring high ceilings, hardwood floors, and designer finishes throughout. The open-concept layout seamlessly connects the living, dining, and kitchen areas, creating an ideal space for both relaxation and entertaining. The gourmet kitchen is a chef's delight, equipped with top-of-the-line appliances, custom cabinetry, and a spacious island. Retreat to the serene master suite, complete with a lavish ensuite bathroom and walk-in closet. Additional highlights include a private rooftop terrace with breathtaking city views, perfect for outdoor gatherings and enjoying the vibrant cityscape. With its prime location and luxurious amenities, this townhouse offers a sophisticated urban lifestyle like no other.",
+      "price": "$1,200,000",
+      "status": "sale",
+      "area": "3,000 sq ft",
+      "location": "456 Oak Avenue, Metropolis, USA",
+      "facilities": ["Open-concept layout", "Rooftop terrace", "Attached garage", "High ceilings", "Designer finishes"],
+      "image": "luxury_townhouse.jpg"
+    },
+    {
+      "estate_title": "Downtown Apartment",
+      "id": 3,
+      "segment_name": "Apartments",
+      "description": "Experience luxurious city living with this stylish downtown apartment. Situated in a prime location, this residence offers convenience, comfort, and modern amenities. Step inside to find a thoughtfully designed interior featuring sleek hardwood floors, expansive windows, and contemporary finishes throughout. The spacious living area is perfect for relaxing or entertaining, while the gourmet kitchen is equipped with stainless steel appliances, quartz countertops, and ample cabinet space. Unwind in the tranquil master suite, complete with a luxurious ensuite bathroom and walk-in closet. Enjoy breathtaking views of the city skyline from the private balcony, ideal for morning coffee or evening cocktails. Additional amenities include a fitness center, 24/7 security, and concierge services. With its unbeatable location and upscale amenities, this downtown apartment offers the ultimate urban lifestyle.",
+      "price": "$3,500/month",
+      "status": "rent",
+      "area": "1,200 sq ft",
+      "location": "789 Elm Street, Downtown, USA",
+      "facilities": ["Balcony with city views", "Fitness center", "24/7 security", "Expansive windows", "Concierge services"],
+      "image": "downtown_apartment.jpg"
+    },
+    {
+      "estate_title": "Student Housing Complex",
+      "id": 4,
+      "segment_name": "Student housing",
+      "description": "Welcome to the ultimate student living experience at this modern housing complex. Designed with students in mind, this community offers comfortable and convenient accommodations just steps from campus. Choose from a variety of fully furnished units, each featuring spacious bedrooms, modern kitchens, and shared living areas. Enjoy access to on-site amenities including study lounges, a fitness center, and a recreation room. With its prime location and upscale amenities, this student housing complex provides a vibrant and supportive community for students to thrive academically and socially.",
+      "price": "$800/month (per bed)",
+      "status": "rent",
+      "area": "Shared units",
+      "location": "101 College Avenue, University Town, USA",
+      "facilities": ["Fully furnished units", "Study lounges", "On-site laundry", "Fitness center", "Recreation room"],
+      "image": "student_housing_complex.jpg"
+    },
+    {
+      "estate_title": "Senior Living Community",
+      "id": 5,
+      "segment_name": "Senior living communities",
+      "description": "Discover resort-style living for active seniors at this vibrant senior living community. Designed with the unique needs of seniors in mind, this community offers a wide range of amenities and activities to support an active and fulfilling lifestyle. Enjoy restaurant-style dining in the elegant dining room, stay active and engaged with scheduled fitness classes and social activities, and relax in the beautifully landscaped outdoor spaces. With its warm and welcoming atmosphere, this senior living community provides a supportive environment where residents can live life to the fullest.",
+      "price": "Starting from $3,000/month",
+      "status": "rent",
+      "area": "Varies",
+      "location": "222 Pine Street, Senior Haven, USA",
+      "facilities": ["Restaurant-style dining", "Wellness center", "Scheduled activities", "Landscaped outdoor spaces", "Social activities"],
+      "image": "senior_living_community.jpg"
+    },
+    {
+      "estate_title": "Beachfront Vacation Rental",
+      "id": 6,
+      "segment_name": "Vacation rentals",
+      "description": "Escape to paradise with this breathtaking beachfront vacation rental. Situated on the pristine shores of the ocean, this property offers the ultimate retreat for relaxation and rejuvenation. Step inside to find a beautifully appointed interior with coastal-inspired decor and modern amenities. The spacious living area is perfect for gathering with family and friends, while the gourmet kitchen is fully equipped for preparing delicious meals. Outside, soak up the sun on the private beach, take a refreshing dip in the sparkling waters, or simply relax on the oceanfront deck and savor the stunning views. With its unbeatable location and luxurious amenities, this beachfront vacation rental is sure to create memories that last a lifetime.",
+      "price": "$500/night",
+      "status": "rent",
+      "area": "1,800 sq ft",
+      "location": "123 Beach Road, Seaside Retreat, USA",
+      "facilities": ["Private beach access", "Outdoor BBQ area", "Oceanfront deck", "Coastal-inspired decor", "Fully equipped kitchen"],
+      "image": "beachfront_vacation_rental.jpg"
+    },
+    {
+      "estate_title": "Cozy Cottage",
+      "id": 7,
+      "segment_name": "Rural retreats",
+      "description": "Escape the hustle and bustle of city life with this charming cozy cottage. Nestled in a picturesque setting, this residence offers a peaceful retreat surrounded by nature's beauty. Step inside to discover a cozy interior featuring rustic wood beams, a stone fireplace, and comfortable furnishings. The open-concept layout seamlessly connects the living, dining, and kitchen areas, creating an inviting space for relaxation and gatherings. The well-equipped kitchen is perfect for preparing home-cooked meals, while the spacious bedrooms offer a restful night's sleep. Outside, enjoy the tranquility of the lush garden and patio area, ideal for enjoying morning coffee or evening stargazing. With its serene location and rustic charm, this cottage provides the perfect getaway for those seeking a slower pace of life.",
+      "price": "$350,000",
+      "status": "sale",
+      "area": "1,000 sq ft",
+      "location": "789 Meadow Lane, Tranquil Valley, USA",
+      "facilities": ["Stone fireplace", "Covered porch", "Garden area", "Rustic wood beams", "Open-concept layout"],
+      "image": "cozy_cottage.jpg"
+    },
+    {
+      "estate_title": "City View Penthouse",
+      "id": 8,
+      "segment_name": "Luxury apartments",
+      "description": "Live the high life with this luxurious city view penthouse. Perched atop a prestigious high-rise building, this residence offers unparalleled views of the city skyline and beyond. Step inside to discover a modern interior featuring sleek design elements, high-end finishes, and expansive windows showcasing the panoramic views. The spacious living area is perfect for entertaining, while the gourmet kitchen is equipped with top-of-the-line appliances and designer cabinetry. Retreat to the lavish master suite, complete with a spa-like ensuite bathroom and walk-in closet. Additional highlights include a private balcony, perfect for enjoying morning coffee or evening cocktails, as well as access to building amenities such as a fitness center, pool, and concierge services. With its prime location and luxurious amenities, this city view penthouse offers a lifestyle of luxury and sophistication.",
+      "price": "$5,000/month",
+      "status": "rent",
+      "area": "2,500 sq ft",
+      "location": "101 Skyline Drive, Urban Heights, USA",
+      "facilities": ["Panoramic city views", "Private balcony", "Fitness center", "Pool", "Concierge services"],
+      "image": "city_view_penthouse.jpg"
+    },
+    {
+      "estate_title": "Mountain View Retreat",
+      "id": 9,
+      "segment_name": "Mountain cabins",
+      "description": "Escape to the tranquility of the mountains with this charming retreat nestled in a scenic alpine setting. Surrounded by majestic peaks and lush forests, this residence offers a peaceful getaway from the hustle and bustle of everyday life. Step inside to discover a cozy interior featuring rustic wood accents, a stone fireplace, and comfortable furnishings. The open-concept layout seamlessly connects the living, dining, and kitchen areas, creating an inviting space for relaxation and gatherings. The well-equipped kitchen is perfect for preparing home-cooked meals, while the spacious bedrooms offer a restful night's sleep. Outside, breathe in the fresh mountain air from the private deck, perfect for enjoying morning coffee or evening star-gazing. With its serene location and natural beauty, this mountain retreat provides the perfect escape for nature lovers and outdoor enthusiasts alike.",
+      "price": "$400,000",
+      "status": "sale",
+      "area": "1,200 sq ft",
+      "location": "789 Mountain Lane, Serene Peaks, USA",
+      "facilities": ["Stone fireplace", "Private deck", "Mountain views", "Rustic wood accents", "Open-concept layout"],
+      "image": "mountain_view_retreat.jpg"
+    },
+    {
+      "estate_title": "Lakefront Cabin",
+      "id": 10,
+      "segment_name": "Lakeside cottages",
+      "description": "Escape to the tranquility of the lake with this charming lakefront cabin. Tucked away in a secluded setting, this residence offers a peaceful retreat surrounded by nature's beauty. Step inside to discover a cozy interior featuring rustic wood accents, a stone fireplace, and comfortable furnishings. The open-concept layout seamlessly connects the living, dining, and kitchen areas, creating an inviting space for relaxation and gatherings. The well-equipped kitchen is perfect for preparing home-cooked meals, while the spacious bedrooms offer a restful night's sleep. Outside, enjoy the serenity of the lake from the private dock, perfect for swimming, fishing, or simply soaking up the sun. With its serene location and rustic charm, this cabin provides the perfect getaway for those seeking a true escape from the everyday.",
+      "price": "$300/night",
+      "status": "rent",
+      "area": "1,200 sq ft",
+      "location": "789 Lakeview Lane, Tranquil Waters, USA",
+      "facilities": ["Stone fireplace", "Private dock", "Lakefront views", "Rustic wood accents", "Open-concept layout"],
+      "image": "lakefront_cabin.jpg"
+    }
+  ]
+  
