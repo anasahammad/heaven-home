@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/swiper-bundle.css';
 
-import { Pagination, Navigation, Autoplay } from 'swiper/modules';
+import { Pagination, Navigation, Autoplay, Keyboard } from 'swiper/modules';
 
 import Slider1 from './Slider1';
 import Slider2 from './Slider2';
@@ -22,7 +22,11 @@ const AllSlides = () => {
             autoplay={
                { delay: 2000}
             }
-            pagination={{ clickable: true }} navigation={true} loop={true} modules={[Pagination, Navigation, Autoplay]} className="mySwiper">
+            pagination={{ clickable: true }} 
+                keyboard={{
+                    enebled: true
+                }}
+            navigation={true} loop={true} modules={[Pagination, Navigation, Autoplay, Keyboard]} className="mySwiper">
 
 <SwiperSlide><Slider1/></SwiperSlide>
 <SwiperSlide>

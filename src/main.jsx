@@ -23,7 +23,8 @@ import Register from './assets/Pages/Register.jsx';
   children: [
     {
       path: "/",
-      element: <Home></Home>
+      element: <Home></Home>, 
+      loader: ()=> fetch("/estate.json")
     },
     {
       path: "/about-us",
