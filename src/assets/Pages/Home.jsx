@@ -1,3 +1,5 @@
+import AboutCompany from "../../Components/AboutCompany";
+import OurMission from "../../Components/OurMission";
 import AllSlides from "../../Sliders/AllSlides";
 
 const Home = () => {
@@ -6,7 +8,8 @@ const Home = () => {
             
         <AllSlides/>
            
-        
+        <AboutCompany/>
+        <OurMission/>
             
         </div>
     );
