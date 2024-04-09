@@ -9,7 +9,7 @@
       "area": "2,500 sq ft",
       "location": "123 Main Street, Anytown, USA",
       "facilities": ["Spacious living room", "Gourmet kitchen", "Private backyard", "Walk-in closet", "Hardwood floors"],
-      "image": "modern_single_family_home.jpg"
+      "image": "https://i.ibb.co/C284rw7/1.jpg"
     },
     {
       "estate_title": "Luxury Townhouse",
@@ -21,7 +21,7 @@
       "area": "3,000 sq ft",
       "location": "456 Oak Avenue, Metropolis, USA",
       "facilities": ["Open-concept layout", "Rooftop terrace", "Attached garage", "High ceilings", "Designer finishes"],
-      "image": "luxury_townhouse.jpg"
+      "image": "https://i.ibb.co/gvBQLFh/pexels-pixabay-164558-1.jpg"
     },
     {
       "estate_title": "Downtown Apartment",
@@ -33,31 +33,31 @@
       "area": "1,200 sq ft",
       "location": "789 Elm Street, Downtown, USA",
       "facilities": ["Balcony with city views", "Fitness center", "24/7 security", "Expansive windows", "Concierge services"],
-      "image": "downtown_apartment.jpg"
+      "image": "https://i.ibb.co/CwMB3CT/pexels-expect-best-323775.jpg"
     },
     {
       "estate_title": "Student Housing Complex",
       "id": 4,
       "segment_name": "Student housing",
       "description": "Welcome to the ultimate student living experience at this modern housing complex. Designed with students in mind, this community offers comfortable and convenient accommodations just steps from campus. Choose from a variety of fully furnished units, each featuring spacious bedrooms, modern kitchens, and shared living areas. Enjoy access to on-site amenities including study lounges, a fitness center, and a recreation room. With its prime location and upscale amenities, this student housing complex provides a vibrant and supportive community for students to thrive academically and socially.",
-      "price": "$800/month (per bed)",
+      "price": "$800/month ",
       "status": "rent",
       "area": "Shared units",
       "location": "101 College Avenue, University Town, USA",
       "facilities": ["Fully furnished units", "Study lounges", "On-site laundry", "Fitness center", "Recreation room"],
-      "image": "student_housing_complex.jpg"
+      "image": "https://i.ibb.co/Yt929w9/7.jpg"
     },
     {
       "estate_title": "Senior Living Community",
       "id": 5,
       "segment_name": "Senior living communities",
       "description": "Discover resort-style living for active seniors at this vibrant senior living community. Designed with the unique needs of seniors in mind, this community offers a wide range of amenities and activities to support an active and fulfilling lifestyle. Enjoy restaurant-style dining in the elegant dining room, stay active and engaged with scheduled fitness classes and social activities, and relax in the beautifully landscaped outdoor spaces. With its warm and welcoming atmosphere, this senior living community provides a supportive environment where residents can live life to the fullest.",
-      "price": "Starting from $3,000/month",
+      "price": " $3,000/month",
       "status": "rent",
       "area": "Varies",
       "location": "222 Pine Street, Senior Haven, USA",
       "facilities": ["Restaurant-style dining", "Wellness center", "Scheduled activities", "Landscaped outdoor spaces", "Social activities"],
-      "image": "senior_living_community.jpg"
+      "image": "https://i.ibb.co/wKnRYdT/pexels-pixabay-164558-1.jpg"
     },
     {
       "estate_title": "Beachfront Vacation Rental",
@@ -69,7 +69,7 @@
       "area": "1,800 sq ft",
       "location": "123 Beach Road, Seaside Retreat, USA",
       "facilities": ["Private beach access", "Outdoor BBQ area", "Oceanfront deck", "Coastal-inspired decor", "Fully equipped kitchen"],
-      "image": "beachfront_vacation_rental.jpg"
+      "image": "https://i.ibb.co/2KwpfkW/pexels-asad-photo-maldives-15031960.jpg"
     },
     {
       "estate_title": "Cozy Cottage",
@@ -81,7 +81,7 @@
       "area": "1,000 sq ft",
       "location": "789 Meadow Lane, Tranquil Valley, USA",
       "facilities": ["Stone fireplace", "Covered porch", "Garden area", "Rustic wood beams", "Open-concept layout"],
-      "image": "cozy_cottage.jpg"
+      "image": "https://i.ibb.co/SmccsQq/pexels-max-vakhtbovycn-7061676.jpg"
     },
     {
       "estate_title": "City View Penthouse",
@@ -93,7 +93,7 @@
       "area": "2,500 sq ft",
       "location": "101 Skyline Drive, Urban Heights, USA",
       "facilities": ["Panoramic city views", "Private balcony", "Fitness center", "Pool", "Concierge services"],
-      "image": "city_view_penthouse.jpg"
+      "image": "https://i.ibb.co/31M0GTR/pexels-max-vakhtbovycn-7546599.jpg"
     },
     {
       "estate_title": "Mountain View Retreat",
@@ -105,19 +105,7 @@
       "area": "1,200 sq ft",
       "location": "789 Mountain Lane, Serene Peaks, USA",
       "facilities": ["Stone fireplace", "Private deck", "Mountain views", "Rustic wood accents", "Open-concept layout"],
-      "image": "mountain_view_retreat.jpg"
-    },
-    {
-      "estate_title": "Lakefront Cabin",
-      "id": 10,
-      "segment_name": "Lakeside cottages",
-      "description": "Escape to the tranquility of the lake with this charming lakefront cabin. Tucked away in a secluded setting, this residence offers a peaceful retreat surrounded by nature's beauty. Step inside to discover a cozy interior featuring rustic wood accents, a stone fireplace, and comfortable furnishings. The open-concept layout seamlessly connects the living, dining, and kitchen areas, creating an inviting space for relaxation and gatherings. The well-equipped kitchen is perfect for preparing home-cooked meals, while the spacious bedrooms offer a restful night's sleep. Outside, enjoy the serenity of the lake from the private dock, perfect for swimming, fishing, or simply soaking up the sun. With its serene location and rustic charm, this cabin provides the perfect getaway for those seeking a true escape from the everyday.",
-      "price": "$300/night",
-      "status": "rent",
-      "area": "1,200 sq ft",
-      "location": "789 Lakeview Lane, Tranquil Waters, USA",
-      "facilities": ["Stone fireplace", "Private dock", "Lakefront views", "Rustic wood accents", "Open-concept layout"],
-      "image": "lakefront_cabin.jpg"
+      "image": "https://i.ibb.co/7KBMBzz/pexels-pixabay-210245.jpg"
     }
   ]
   
