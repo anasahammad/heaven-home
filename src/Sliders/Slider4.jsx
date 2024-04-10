@@ -9,7 +9,7 @@ const Slider4 = () => {
     <div className="max-w-screen-lg">
       <h1 className="mb-5 text-5xl text-white font-bold">Elevate Your Living Experience with HeavenHome</h1>
       <p className="mb-5 text-white">Embrace the vibrant energy of city living with our diverse range of urban properties. From sleek downtown lofts to chic penthouses with skyline views, discover a lifestyle that epitomizes sophistication, convenience, and excitement. Let HeavenHome guide you to your perfect urban sanctuary</p>
-      <button className="btn btn-primary">Get Started</button>
+      <a  href="#estates" className="btn bg-[#D23A25] text-white">View Estates</a>
     </div>
   </div>
 </div>

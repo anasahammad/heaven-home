@@ -13,6 +13,8 @@ import AboutUS from './assets/Pages/AboutUS.jsx';
 import ContactUs from './assets/Pages/ContactUs.jsx';
 import Login from './assets/Pages/Login.jsx';
 import Register from './assets/Pages/Register.jsx';
+import EstateDetails from './Components/EstateDetails.jsx';
+
 
 
 
@@ -27,8 +29,14 @@ import Register from './assets/Pages/Register.jsx';
       loader: ()=> fetch("/estate.json")
     },
     {
+      path: "/details/:id",
+      element: <EstateDetails></EstateDetails>,
+      loader: ()=> fetch("/estate.json")
+    },
+    {
       path: "/about-us",
-      element: <AboutUS/>
+      element: <AboutUS/>,
+      
     },
     {
       path: "/contact-us",

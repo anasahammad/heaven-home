@@ -1,8 +1,8 @@
 import AboutCompany from "../../Components/AboutCompany";
-import EstateCard from "../../Components/EstateCard";
+
 import OurMission from "../../Components/OurMission";
 import AllSlides from "../../Sliders/AllSlides";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -18,6 +18,7 @@ import { CiLocationOn } from "react-icons/ci";
 const Home = () => {
 
     const allEstates = useLoaderData()
+  
     
     return (
         <div className="">
@@ -27,7 +28,7 @@ const Home = () => {
         <AboutCompany/>
         <OurMission/>
 
-        <div className="py-10">
+        <div id="estates" className="py-10">
             <div className="text-center">
             <h1 className="text-4xl font-bold mb-4">Featured Properties</h1>
             <p >Handpicked properties by our team</p>
@@ -44,7 +45,7 @@ const Home = () => {
                 spaceBetween: 15
             }
         }}
-
+       
         freeMode={true}
         pagination={{
             clickable: true
@@ -55,8 +56,6 @@ const Home = () => {
       >
 
                 
-
-
         {
              
                 allEstates.map((estate)=> <SwiperSlide key={estate.id}>
@@ -71,24 +70,27 @@ const Home = () => {
   </figure>
   <div className="flex flex-col px-3 py-2">
 
-      <h4 className=" text-red-400 ">{estate.segment_name}</h4>
+      <h4 className=" text-green-500 ">{estate.segment_name}</h4>
   
 
         <h1 className="text-xl text-left font-bold my-2">{estate.estate_title}</h1>
         <div className="flex items-center gap-1">
-        <CiLocationOn className="text-[#BB915B] font-bold"/>
+        <CiLocationOn className="text-[#D23A25] font-bold"/>
         <p>{estate.location}</p>
         </div>
 
         <div className="flex  justify-between my-2 pr-2">
-            <h4 className="font-bold text-xl text-[#BB915B]"> {estate.price} </h4>
+            <h4 className="font-bold text-xl text-[#D23A25]"> {estate.price} </h4>
             <p className="text-[18px] font-bold">Area: <span className="font-normal">{estate.area}</span></p>
         </div> 
     <div className="divider"></div>
 
        
     <div className="flex justify-center">
-      <button className="btn bg-[#BB915B] text-white">Vew Details</button>
+<Link to={`/details/${estate.id}`}>
+<button className="btn bg-[#D23A25] text-white">Vew Details</button>
+</Link>
+      
     </div>
   </div>
 </div>
