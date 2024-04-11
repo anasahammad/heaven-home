@@ -40,7 +40,8 @@ const Navbar = () => {
   </div>
   <div className="navbar-end ">
     
-    <Link className="btn  bg-[#D23A25] text-white" to="/register "><FiLogIn/> Sign In</Link>
+    <Link to="/login" className="btn  bg-[#D23A25] text-white" ><FiLogIn/> Sign In</Link>
+    <Link to="/register" className="btn  bg-[#D23A25] text-white" ><FiLogIn/> Sign Up</Link>
   </div>
 </div>
     );
