@@ -14,6 +14,7 @@ import ContactUs from './assets/Pages/ContactUs.jsx';
 import Login from './assets/Pages/Login.jsx';
 import Register from './assets/Pages/Register.jsx';
 import EstateDetails from './Components/EstateDetails.jsx';
+import AuthProvider from './AuthProvider/AuthProvider.jsx';
 
 
 
@@ -57,6 +58,8 @@ import EstateDetails from './Components/EstateDetails.jsx';
 
 ReactDOM.createRoot(document.getElementById("root")).render( 
  <React.StrictMode> 
+ <AuthProvider>
  <RouterProvider router={router} /> 
+ </AuthProvider>
  </React.StrictMode> 
 ); 
