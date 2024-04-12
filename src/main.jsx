@@ -18,7 +18,6 @@ import AuthProvider from './AuthProvider/AuthProvider.jsx';
 
 
 
-
  const router = createBrowserRouter([ 
   { 
   path: "/", 
@@ -60,6 +59,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
  <React.StrictMode> 
  <AuthProvider>
  <RouterProvider router={router} /> 
+ 
  </AuthProvider>
  </React.StrictMode> 
 ); 

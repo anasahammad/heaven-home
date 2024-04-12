@@ -57,25 +57,34 @@ const Register = () => {
       <p>Ready to get started? It's time to fill out the form and create your account. </p>
       
     </div>
-    <div className="card shrink-0 w-full max-w-[45rem] shadow-2xl ">
+    <div className="card shrink-0 w-full max-w-[30rem] shadow-2xl ">
       <form onSubmit={handleSubmit(handleRegister)} className="card-body gap-4">
         <div className="form-control">
-          
+        <label className="label">
+            <span className="label-text font-semibold">Name</span>
+          </label>
           <input {...register("name",
         { required: true })} name="name" type="text" placeholder="Your Name" className="input input-bordered" />
         {errors.name && <span className="text-red-600">This field is required</span>}
         </div>
         <div className="form-control">
-          
+        <label className="label">
+            <span className="label-text font-semibold">Email</span>
+          </label>
           <input {...register("email", { required: true })} name="email" type="email" placeholder="Your Email" className="input input-bordered"  />
           {errors.email && <span className="text-red-600">This field is required</span>}
         </div>
         <div className="form-control">
-          
+        <label className="label">
+            <span className="label-text font-semibold">Photo URL</span>
+          </label>
           <input  name="photoURL" type="text" placeholder="Your Photo URL" className="input input-bordered"  />
         
         </div>
         <div className="form-control relative">
+        <label className="label">
+            <span className="label-text font-semibold">Password</span>
+          </label>
           <input {...register("password", {
             required: "Password is required", 
             minLength: {
@@ -91,12 +100,14 @@ const Register = () => {
 {errors.password && <span className="text-red-600">{errors.password.message}</span>}
 
 
-          <span className="absolute right-5 top-4" onClick={()=>setShow(!show)}>
+          <span className="absolute right-5 top-12" onClick={()=>setShow(!show)}>
             {!show ? <FaEyeSlash/> : <FaEye/>}
           </span>
           </div>
         <div className="form-control">
-          
+        <label className="label">
+            <span className="label-text font-semibold">Confirm Password</span>
+          </label>
           <input  {...register("confirmPassword", {
           validate: (value) => value === password || 'Passwords do not match'
         })} name="confirmPassword" type="password" placeholder="Confirm Password" className="input input-bordered"  />
