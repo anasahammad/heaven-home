@@ -16,9 +16,7 @@ const AuthProvider = ({children}) => {
         return signInWithEmailAndPassword(auth, email, password)
     }
 
-    const forgetPassword = (email)=>{
-        return sendPasswordResetEmail(auth, email)
-    }
+    
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth, currentUser=>{
             console.log("observing", currentUser);
@@ -32,7 +30,7 @@ const AuthProvider = ({children}) => {
     const authInfo = {user,
          createUser, 
          signInUser, 
-         forgetPassword}
+        }
     return (
         <AuthContext.Provider value={authInfo}>
             {children}

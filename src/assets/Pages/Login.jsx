@@ -3,11 +3,12 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 
 const Login = () => {
     const [show, setShow] = useState(false)
-    const {signInUser, forgetPassword} = useContext(AuthContext)
+    const {signInUser} = useContext(AuthContext)
     const navigate = useNavigate()
     const emailRef = useRef(null)
    
@@ -20,33 +21,21 @@ const Login = () => {
 
       const handleSignIn = (data)=>{
         const {email, password} = data;
-        signInUser(email, password)
-        .then(result=>{
-            navigate("/")
-           
-            
-
-        })
-        .catch(error=>{
-            console.log(error.message);
-        })
-      }
-
-      //handle forgot password
-
-      const handleFOrgetPassword = ()=>{
-        const email = emailRef.current.value;
-
-
-        forgetPassword(email)
-        .then(()=>{
-            console.log("Sent    .....");
         
+        signInUser(email, password)
+        .then(()=>{
+            navigate("/")
+           toast.success("Sign In Successfull")
+          
         })
         .catch(error=>{
             console.log(error.message);
         })
       }
+
+      
+
+    
     return (
         <div>
           <div className="">
@@ -65,7 +54,7 @@ const Login = () => {
           </label>
           <input {...register("email", {
             required: true
-          })} type="email" placeholder="Type your Email" className="input input-bordered" ref={emailRef} />
+          })} type="email" placeholder="Type your Email" name="email" className="input input-bordered"/>
           {errors.email && <span className="text-red-600">Email is required to sign in</span>}
         </div>
         <div className="form-control relative">
@@ -80,7 +69,7 @@ const Login = () => {
             {!show ? <FaEyeSlash/> : <FaEye/>}
           </span>
           <label className="label">
-            <Link onClick={handleFOrgetPassword} className="label-text-alt link link-hover">Forgot password?</Link>
+            <Link  className="label-text-alt link link-hover">Forgot password?</Link>
           </label>
         </div>
         <div className="form-control mt-6">

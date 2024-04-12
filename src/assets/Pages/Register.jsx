@@ -3,13 +3,15 @@ import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link,  useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
+import { updateProfile } from "firebase/auth";
 
 
 const Register = () => {
   const [show, setShow] = useState(false)
   const acceptRef = useRef(null)
   const [accepted, setAccepted] = useState(false)
-  const {createUser} = useContext(AuthContext)
+  const {createUser, user} = useContext(AuthContext)
   const navigate = useNavigate()
   
   //React Form - Hook codes
@@ -23,18 +25,29 @@ const Register = () => {
 
   //handle register of signUp functionality
   const handleRegister = (data) => {
-      const {email, password} = data;
-
-      createUser(email, password)
-      .then(result=>{
-        console.log(result.user)
-       
-        navigate("/login");
-
-      })
-      .catch(error=> {
-        console.log(error.message);
-      })
+      const {email, password, name, photoURL} = data;
+      console.log(photoURL)
+      if(email === user.email){
+        return toast.error("This email is already registered")
+      }
+      else{
+        createUser(email, password)
+        .then(result=>{
+          
+          toast.success("Account Created Successfully")
+          navigate("/login");
+          updateProfile(result.user, {
+            displayName: name,
+            photoURL: photoURL
+          })
+          
+        })
+        
+        .catch(error=> {
+          console.log(error.message);
+        })
+      }
+      
       
   }
   const disableBtn = ()=>{
@@ -78,7 +91,7 @@ const Register = () => {
         <label className="label">
             <span className="label-text font-semibold">Photo URL</span>
           </label>
-          <input  name="photoURL" type="text" placeholder="Your Photo URL" className="input input-bordered"  />
+          <input {...register("photoURL")}  name="photoURL" type="text" placeholder="Your Photo URL" className="input input-bordered"  />
         
         </div>
         <div className="form-control relative">

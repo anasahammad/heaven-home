@@ -15,6 +15,7 @@ import Login from './assets/Pages/Login.jsx';
 import Register from './assets/Pages/Register.jsx';
 import EstateDetails from './Components/EstateDetails.jsx';
 import AuthProvider from './AuthProvider/AuthProvider.jsx';
+import { Toaster } from 'react-hot-toast';
 
 
 
@@ -59,7 +60,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
  <React.StrictMode> 
  <AuthProvider>
  <RouterProvider router={router} /> 
- 
+ <Toaster></Toaster>
  </AuthProvider>
  </React.StrictMode> 
 ); 
