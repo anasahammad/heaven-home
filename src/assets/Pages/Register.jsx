@@ -27,15 +27,13 @@ const Register = () => {
   const handleRegister = (data) => {
       const {email, password, name, photoURL} = data;
       console.log(photoURL)
-      if(email === user.email){
-        return toast.error("This email is already registered")
-      }
-      else{
+      
+      
         createUser(email, password)
         .then(result=>{
           
           toast.success("Account Created Successfully")
-          navigate("/login");
+          navigate("/");
           updateProfile(result.user, {
             displayName: name,
             photoURL: photoURL
@@ -44,9 +42,10 @@ const Register = () => {
         })
         
         .catch(error=> {
-          console.log(error.message);
+            return toast.error(`${error.message.replace('Firebase: Error (auth/', ' ').replace(/\)/, '')}`)
+          
         })
-      }
+      
       
       
   }
