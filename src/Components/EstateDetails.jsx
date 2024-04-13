@@ -31,7 +31,7 @@ const EstateDetails = () => {
 		</div>
 		<div className="space-y-2">
 			<a rel="noopener noreferrer" href="#" className="block">
-				<h3 className="text-4xl font-bold dark:text-violet-600">{estate_title}</h3>
+				<h3 className="text-2xl md:text-4xl lg:text-4xl font-bold dark:text-violet-600">{estate_title}</h3>
 			</a>
             <h4 className='text-xl font-semibold'>Description:</h4>
 			<p className="leading-snug dark:text-gray-600">{description}</p>
@@ -49,14 +49,14 @@ const EstateDetails = () => {
            
            
         
-        <div className=' flex flex-col md:flex-row lg:flex-row justify-between items-center'>
+        <div className=' flex flex-row justify-between items-center'>
                 
               
-                    <h1 className='text-3xl font-bold text-[#D23A25]'>
+                    <h1 className=' md:text-3xl lg:text-3xl font-bold text-[#D23A25]'>
                         Price:  {}
                         <span>{price}</span></h1>
 
-                        <h4 className='text-2xl font-bold'>Area : <span>{area}</span> </h4>
+                        <h4 className='md:text-2xl lg:text-2xl font-bold'>Area : <span>{area}</span> </h4>
                 
             </div>
 

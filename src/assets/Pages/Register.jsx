@@ -11,7 +11,7 @@ const Register = () => {
   const [show, setShow] = useState(false)
   const acceptRef = useRef(null)
   const [accepted, setAccepted] = useState(false)
-  const {createUser, user} = useContext(AuthContext)
+  const {createUser, user, setReload} = useContext(AuthContext)
   const navigate = useNavigate()
   
   //React Form - Hook codes
@@ -38,7 +38,10 @@ const Register = () => {
             displayName: name,
             photoURL: photoURL
           })
-          
+          .then(()=>{
+            setReload(true)
+          })
+         
         })
         
         .catch(error=> {
@@ -69,7 +72,7 @@ const Register = () => {
       <p>Ready to get started? It's time to fill out the form and create your account. </p>
       
     </div>
-    <div className="card shrink-0 w-full max-w-[30rem] shadow-2xl ">
+    <div className="card shrink-0 w-full mx-auto max-w-[30rem] shadow-2xl ">
       <form onSubmit={handleSubmit(handleRegister)} className="card-body gap-4">
         <div className="form-control">
         <label className="label">

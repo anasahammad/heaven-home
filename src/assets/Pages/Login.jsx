@@ -76,7 +76,7 @@ const Login = () => {
      <p>Welcome back! Log in to your account to access all the features.</p>
       
     </div>
-    <div className="card   shrink-0 w-full max-w-[30rem] shadow-2xl">
+    <div className="card   shrink-0 w-full mx-auto max-w-[30rem] shadow-2xl">
         
       <form onSubmit={handleSubmit(handleSignIn)} className="card-body">
         <div className="form-control">

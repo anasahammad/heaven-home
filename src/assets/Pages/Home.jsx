@@ -46,7 +46,7 @@ const Home = () => {
             }, 
             1024: {
                 slidesPerView: 3,
-                spaceBetween: 40,
+                spaceBetween: 15,
               },
         }}
        
@@ -56,10 +56,8 @@ const Home = () => {
         }}
         
         modules={[FreeMode, Pagination]}
-        className="max-w-[95%] mySwipper"
-      >
-
-                
+        className="max-w-[90%] mx-auto"
+      >        
         {
              
                 allEstates.map((estate)=> <SwiperSlide key={estate.id}>
@@ -67,7 +65,7 @@ const Home = () => {
 
                     
 
-<div className="card   w-96 h-[500px]  bg-base-100  shadow-xl my-6">
+<div className="card   w-96 mx-auto h-[500px]  bg-base-100  shadow-xl my-6">
   <figure className="relative">
     <img src={estate.image} alt="Shoes" className="rounded-xl   transition duration-300 ease-in-out hover:scale-110 " />
     <span className="absolute top-2 left-2 bg-[#3E4C66] text-white  px-4 cursor-pointer">{estate.status}</span>
