@@ -39,7 +39,7 @@ const Register = () => {
             photoURL: photoURL
           })
           .then(()=>{
-            setReload(true)
+            setReload(true) 
           })
          
         })
@@ -66,7 +66,7 @@ const Register = () => {
     return (
         <div>
            <div className=" ">
-  <div className="hero-content flex-col ">
+  <div className="hero-content mx-auto flex-col ">
     <div className="text-center ">
       <h1 className="text-4xl font-bold mb-2 ">Create an account</h1>
       <p>Ready to get started? It's time to fill out the form and create your account. </p>

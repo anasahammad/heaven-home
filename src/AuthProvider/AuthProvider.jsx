@@ -12,27 +12,28 @@ const AuthProvider = ({children}) => {
     const auth = getAuth(app)
     const [user, setUser] = useState(null)
     const [reload, setReload] = useState(false)
+    const [loading, setLoading] = useState(true)
     
     const createUser = (email, password)=>{
-       
+        setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
     
     const signInUser = (email, password)=>{
-        
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
 
     const googleSignIn = ()=>{
-        
+        setLoading(true)
         return signInWithPopup(auth, googleProvider)
     }
     const twitterSignIn = ()=>{
-        
+        setLoading(true)
         return signInWithPopup(auth, xProvider)
     }
     const githubSignIn = ()=>{
-        
+        setLoading(true)
         return signInWithPopup(auth, githubProvider)
     }
 
@@ -44,6 +45,7 @@ const AuthProvider = ({children}) => {
         const unsubscribe = onAuthStateChanged(auth, currentUser=>{
             console.log("observing", currentUser);
             setUser(currentUser)
+            setLoading(false)
         })
         return ()=>{
             unsubscribe();
@@ -56,7 +58,8 @@ const AuthProvider = ({children}) => {
         twitterSignIn,
         githubSignIn,
         signOutUser, 
-        setReload
+        setReload,
+        loading
 
     }
     return (

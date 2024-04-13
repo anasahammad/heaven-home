@@ -16,6 +16,7 @@ import Register from './assets/Pages/Register.jsx';
 import EstateDetails from './Components/EstateDetails.jsx';
 import AuthProvider from './AuthProvider/AuthProvider.jsx';
 import { Toaster } from 'react-hot-toast';
+import PrivateRoutes from './PrivateRoutes/PrivateRoutes.jsx';
 
 
 
@@ -31,7 +32,7 @@ import { Toaster } from 'react-hot-toast';
     },
     {
       path: "/details/:id",
-      element: <EstateDetails></EstateDetails>,
+      element: <PrivateRoutes><EstateDetails></EstateDetails></PrivateRoutes>,
       loader: ()=> fetch("/estate.json")
     },
     {
