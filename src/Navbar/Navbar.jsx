@@ -5,7 +5,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { CiEdit, CiLogout, CiSettings } from "react-icons/ci";
 import toast from "react-hot-toast";
-import './Navbar.css'
+
 import { FaRegCircleUser } from "react-icons/fa6";
 import { IoMdHelpCircleOutline } from "react-icons/io";
 
@@ -21,6 +21,7 @@ const handleIsOpen = ()=>{
      const handleSignOut = ()=>{
       signOutUser()
       .then(()=>{
+  
         toast.success("Sign Out successfull")
       })
      }
@@ -32,15 +33,17 @@ const handleIsOpen = ()=>{
     </>
     return (
 
-        <div className="navbar   bg-base-200 lg:py-6 lg:px-6">
+        <div className="navbar  bg-base-200 lg:py-6 lg:px-6">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost md:hidden lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </div>
-      <nav tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-52">
+      <nav tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-40">
        {navLinks}
-       
+        {/* {
+          !user && <NavLink to="/register"  className={({isActive})=> isActive ? "text-[#D23A25] font-bold" : ""  }>Sign Up</NavLink>
+        } */}
       </nav>
     </div>
     <Link to="/" className="btn btn-ghost md:text-2xl lg:text-3xl">

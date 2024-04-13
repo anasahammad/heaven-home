@@ -13,20 +13,25 @@ const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null)
     
     const createUser = (email, password)=>{
+       
         return createUserWithEmailAndPassword(auth, email, password)
     }
     
     const signInUser = (email, password)=>{
+        
         return signInWithEmailAndPassword(auth, email, password)
     }
 
     const googleSignIn = ()=>{
+        
         return signInWithPopup(auth, googleProvider)
     }
     const twitterSignIn = ()=>{
+        
         return signInWithPopup(auth, xProvider)
     }
     const githubSignIn = ()=>{
+        
         return signInWithPopup(auth, githubProvider)
     }
 
@@ -37,8 +42,8 @@ const AuthProvider = ({children}) => {
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth, currentUser=>{
             console.log("observing", currentUser);
-            setUser(currentUser)
            
+            setUser(currentUser)
         })
         return ()=>{
             unsubscribe();

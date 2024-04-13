@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { CiLocationOn } from 'react-icons/ci';
 import { useLoaderData, useParams } from "react-router-dom";
 const EstateDetails = () => {

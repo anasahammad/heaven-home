@@ -33,17 +33,21 @@ const Home = () => {
             <h1 className="text-4xl font-bold mb-4">Featured Properties</h1>
             <p >Handpicked properties by our team</p>
             </div>
-
+            
             <Swiper
         breakpoints={{
             300: {
+                slidesPerView: 1, 
+                spaceBetween: 8
+            }, 
+            700: {
                 slidesPerView: 2, 
                 spaceBetween: 15
             }, 
-            700: {
-                slidesPerView: 3, 
-                spaceBetween: 15
-            }
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+              },
         }}
        
         freeMode={true}
@@ -52,46 +56,48 @@ const Home = () => {
         }}
         
         modules={[FreeMode, Pagination]}
-        className="max-w-[90%] "
+        className="max-w-[95%] mySwipper"
       >
 
                 
         {
              
                 allEstates.map((estate)=> <SwiperSlide key={estate.id}>
-                    <div className="flex flex-col gap-6 cursor-pointer">
+                    <div className=" cursor-pointer my-6  overflow-hidden">
 
                     
 
-<div className="card   h-full w-96 bg-base-100  shadow-xl my-6">
+<div className="card   w-96 h-[500px]  bg-base-100  shadow-xl my-6">
   <figure className="relative">
-    <img src={estate.image} alt="Shoes" className="rounded-xl h-[280px] transition duration-300 ease-in-out hover:scale-110 " />
-    <span className="absolute top-2 left-2 bg-[#3E4C66] text-white px-4 cursor-pointer">{estate.status}</span>
+    <img src={estate.image} alt="Shoes" className="rounded-xl   transition duration-300 ease-in-out hover:scale-110 " />
+    <span className="absolute top-2 left-2 bg-[#3E4C66] text-white  px-4 cursor-pointer">{estate.status}</span>
   </figure>
   <div className="flex flex-col px-3 py-2">
 
-      <h4 className=" text-green-500 ">{estate.segment_name}</h4>
+      <h4 className=" text-green-500  ">{estate.segment_name}</h4>
   
 
-        <h1 className="text-xl text-left font-bold my-2">{estate.estate_title}</h1>
-        <div className="flex items-center gap-1">
+        <h1 className=" text-xl text-left font-bold my-2">{estate.estate_title}</h1>
+        <div className="flex text-sm  items-center gap-1">
         <CiLocationOn className="text-[#D23A25] font-bold"/>
         <p>{estate.location}</p>
         </div>
 
-        <div className="flex  justify-between my-2 pr-2">
+        <div className="flex gap-4 md:justify-between lg:justify-between my-2 md:pr-8 lg:pr-2">
             <h4 className="font-bold text-xl text-[#D23A25]"> {estate.price} </h4>
             <p className="text-[18px] font-bold">Area: <span className="font-normal">{estate.area}</span></p>
         </div> 
     <div className="divider"></div>
 
-       
-    <div className="flex justify-center">
+       <div className="flex-grow">
+       <div className="flex  justify-center">
 <Link to={`/details/${estate.id}`}>
-<button className="btn bg-[#D23A25] text-white">Vew Details</button>
+<button className="btn bg-[#D23A25]  text-white">Vew Details</button>
 </Link>
       
     </div>
+       </div>
+   
   </div>
 </div>
 </div>
