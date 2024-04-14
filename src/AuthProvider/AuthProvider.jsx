@@ -42,6 +42,7 @@ const AuthProvider = ({children}) => {
     }
     
     useEffect(()=>{
+        
         const unsubscribe = onAuthStateChanged(auth, currentUser=>{
             console.log("observing", currentUser);
             setUser(currentUser)
@@ -59,7 +60,8 @@ const AuthProvider = ({children}) => {
         githubSignIn,
         signOutUser, 
         setReload,
-        loading
+        loading,
+        setLoading
 
     }
     return (

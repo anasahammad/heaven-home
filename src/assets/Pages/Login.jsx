@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import Spinner from "../../Components/Spinner";
 
 
 const Login = () => {
@@ -27,6 +28,7 @@ const Login = () => {
         signInUser(email, password)
         .then(()=>{
           toast.success("Sign In Successfull")
+         
             navigate("/")
           
         })
@@ -39,6 +41,7 @@ const Login = () => {
         socialProvider()
         .then(()=>{
           toast.success("Sign In Successfull")
+          
           navigate(from)
         })
         .catch(error=>{

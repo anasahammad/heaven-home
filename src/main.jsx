@@ -17,6 +17,7 @@ import EstateDetails from './Components/EstateDetails.jsx';
 import AuthProvider from './AuthProvider/AuthProvider.jsx';
 import { Toaster } from 'react-hot-toast';
 import PrivateRoutes from './PrivateRoutes/PrivateRoutes.jsx';
+import UpdateProfile from './assets/Pages/UpdateProfile.jsx';
 
 
 
@@ -51,6 +52,10 @@ import PrivateRoutes from './PrivateRoutes/PrivateRoutes.jsx';
     {
       path: "/register",
       element: <Register/>
+    }, 
+    {
+      path: "/update-profile", 
+      element:<UpdateProfile/>
     }
   ]
   }, 

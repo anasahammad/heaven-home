@@ -29,7 +29,7 @@ const handleIsOpen = ()=>{
     <NavLink className={({isActive})=> isActive ? "text-[#D23A25] font-bold " : ""  }  to="/">Home</NavLink>
     <NavLink  to="/about-us"  className={({isActive})=> isActive ? "text-[#D23A25] font-bold" : ""  }>About Us</NavLink>
     <NavLink to="/contact-us"  className={({isActive})=> isActive ? "text-[#D23A25] font-bold" : ""  }>Contact Us</NavLink>
-    
+     {user && <NavLink to="/update-profile"  className={({isActive})=> isActive ? "text-[#D23A25] font-bold" : ""  }>Update Profile</NavLink>}
     </>
     return (
 
@@ -64,43 +64,43 @@ const handleIsOpen = ()=>{
   
 
   {user ?<div className="dropdown dropdown-end relative">
-      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar tooltip tooltip-warning   tooltip-left"  data-tip={user?.displayName} onClick={handleIsOpen}>
+      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar tooltip tooltip-warning   tooltip-left"    data-tip={user?.displayName} onClick={handleIsOpen}>
         <div className="w-10 rounded-full">
           <img alt="Tailwind CSS Navbar component" src={user?.photoURL ? user.photoURL : "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />
         </div>
       </div>
-      <ul tabIndex={0} className={`menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-60 absolute top-full  ${
+      <ul tabIndex={0} className={`menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-32 md:w-60 lg:w-60 absolute top-full  ${
           isOpen ? '' : 'hidden'
         }`}>
 
-          <div className="flex  items-center gap-3 pb-8">
+          <div className="flex flex-col lg:flex-row md:flex-row  items-center md:gap-3 lg:gap-3 md:pb-8 lg:pb-8">
             <div className="w-12 rounded-full">
             <img src={user?.photoURL ? user.photoURL : "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} alt="" className="" />
             </div>
             <div>
-            <h3 className="text-[18px] font-medium   w-full ">{user?.displayName || "Name not found"}</h3>
+            <h3 className="md:text-[18px] lg:text-[18px] font-medium   w-full ">{user?.displayName || "Name not found"}</h3>
             </div>
           
           </div>
        
        
-        <li className="text-[17px] border-t-2  py-2 border-[#0000000d] ">
+        <li className="md:text-[17px] lg:text-[17px] border-t-2 md:py-2  lg:py-2 border-[#0000000d] ">
           <Link className="">
           <FaRegCircleUser></FaRegCircleUser> MY Profile
           </Link>
         </li>
 
-        <li className=" py-2 text-[17px] border-t-2 border-[#0000000d] ">
-          <Link className="">
+        <li className=" md:py-2  lg:py-2 md:text-[17px] lg:text-[17px] border-t-2 border-[#0000000d] ">
+          <Link to="/update-profile" className="">
           <CiEdit/> Edit Profile
           </Link>
         </li>
-        <li className="text-[17px] border-t-2  py-2 border-[#0000000d] ">
+        <li className="md:text-[17px] lg:text-[17px] border-t-2  md:py-2  lg:py-2 border-[#0000000d] ">
           <Link className="">
           <CiSettings/> Settings
           </Link>
         </li>
-        <li className="text-[17px] border-t-2  py-2 border-[#0000000d] ">
+        <li className="md:text-[17px] lg:text-[17px] border-t-2  md:py-2  lg:py-2 border-[#0000000d] ">
           <Link className="">
           <IoMdHelpCircleOutline/> Help
           </Link>
