@@ -1,6 +1,7 @@
 
+import { BsArrowUpRight } from 'react-icons/bs';
 import { CiLocationOn } from 'react-icons/ci';
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 const EstateDetails = () => {
     const allEstates = useLoaderData()
  const {id} = useParams()
@@ -61,7 +62,7 @@ const EstateDetails = () => {
             </div>
 
                 <div className='flex justify-center'>
-                <button className='btn bg-[#D23A25] text-white'>Book Now</button>
+                <Link to="/" className='btn bg-[#D23A25] text-white'>Go to Home <BsArrowUpRight/></Link>
                 </div>
             
 	</div>

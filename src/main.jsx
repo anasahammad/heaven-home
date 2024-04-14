@@ -18,6 +18,8 @@ import AuthProvider from './AuthProvider/AuthProvider.jsx';
 import { Toaster } from 'react-hot-toast';
 import PrivateRoutes from './PrivateRoutes/PrivateRoutes.jsx';
 import UpdateProfile from './assets/Pages/UpdateProfile.jsx';
+import UserProfile from './assets/Pages/UserProfile.jsx';
+import ErrorPage from './assets/Pages/ErrorPage.jsx';
 
 
 
@@ -25,6 +27,7 @@ import UpdateProfile from './assets/Pages/UpdateProfile.jsx';
   { 
   path: "/", 
   element: <Root></Root>, 
+  errorElement: <ErrorPage/>,
   children: [
     {
       path: "/",
@@ -56,6 +59,9 @@ import UpdateProfile from './assets/Pages/UpdateProfile.jsx';
     {
       path: "/update-profile", 
       element:<UpdateProfile/>
+    }, 
+    {path: "/user-profile", 
+      element: <UserProfile/>
     }
   ]
   }, 
