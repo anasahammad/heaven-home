@@ -4,7 +4,7 @@ import  { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import toast from 'react-hot-toast';
-
+import { TfiEmail } from "react-icons/tfi";
 
 const UpdateProfile = () => {
  const {user, setLoading} = useContext(AuthContext)
@@ -36,7 +36,12 @@ setValue('photoURL', user.photoURL || ''  );
            <p className='text-center mb-6'>Need to update your profile? Here You can change your name and Photo.</p>
            <div className='shadow-xl'>
            <figure><img className='w-32 h-32 mx-auto rounded-full' src={user?.photoURL} alt="Movie"/></figure>
-  <h3 className=' md:text-2xl lg:text-2xl text-center'>Name: {user.displayName}</h3>
+  <h3 className=' md:text-2xl lg:text-2xl text-center '>Name: {user.displayName}</h3>
+  <div className='flex justify-center items-center gap-2 mt-2'>
+  <TfiEmail className=''/>
+  <p className='text-center '> {user.email}</p>
+  </div>
+  
  
   <form onSubmit={handleSubmit(handleUpdate)} className="card-body">
         <div className="form-control">
