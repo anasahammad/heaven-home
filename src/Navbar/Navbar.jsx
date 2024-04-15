@@ -21,18 +21,23 @@ const handleIsOpen = ()=>{
      const handleSignOut = ()=>{
       signOutUser()
       .then(()=>{
-  
         toast.success("Sign Out successfull")
       })
      }
     const navLinks = <>
     <NavLink className={({isActive})=> isActive ? "text-[#D23A25] font-bold " : ""  }  to="/">Home</NavLink>
-    <NavLink  to="/about-us"  className={({isActive})=> isActive ? "text-[#D23A25] font-bold" : ""  }>About Us</NavLink>
-    <NavLink to="/contact-us"  className={({isActive})=> isActive ? "text-[#D23A25] font-bold" : ""  }>Contact Us</NavLink>
-     {user && <NavLink to="/update-profile"  className={({isActive})=> isActive ? "text-[#D23A25] font-bold" : ""  }>Update Profile</NavLink>}
-     {user && <NavLink to="/user-profile"  className={({isActive})=> isActive ? "text-[#D23A25] font-bold" : ""  }>User Profile</NavLink>}
 
-     <NavLink to="/booked-estate"  className={({isActive})=> isActive ? "text-[#D23A25] font-bold" : ""  }>Booked Estate</NavLink>
+    
+     {user && <>
+      <NavLink to="/wishlist"  className={({isActive})=> isActive ? "text-[#D23A25] font-bold" : ""  }>Wishlist</NavLink>
+      <NavLink to="/update-profile"  className={({isActive})=> isActive ? "text-[#D23A25] font-bold" : ""  }>Update Profile</NavLink>
+     
+     </>}
+
+     
+
+     <NavLink  to="/about-us"  className={({isActive})=> isActive ? "text-[#D23A25] font-bold" : ""  }>About Us</NavLink> 
+    <NavLink to="/contact-us"  className={({isActive})=> isActive ? "text-[#D23A25] font-bold" : ""  }>Contact Us</NavLink>
     </>
     return (
 
@@ -66,7 +71,7 @@ const handleIsOpen = ()=>{
 
     </Link>
   </div>
-  <div className="navbar-center hidden md:flex lg:flex">
+  <div className="navbar-center md:ml-12 hidden md:flex lg:flex">
     <nav className="menu menu-horizontal gap-3 px-1 text-[17px]">
       {navLinks}
     </nav>

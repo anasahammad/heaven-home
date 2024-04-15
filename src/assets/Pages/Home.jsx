@@ -13,7 +13,7 @@ import 'swiper/css/pagination';
 
 
 
-import { FreeMode, Pagination } from 'swiper/modules';
+import { Autoplay, FreeMode, Pagination } from 'swiper/modules';
 import { CiLocationOn } from "react-icons/ci";
 const Home = () => {
 
@@ -42,11 +42,11 @@ const Home = () => {
             }, 
             700: {
                 slidesPerView: 2, 
-                spaceBetween: 15
+                spaceBetween: 17
             }, 
             1024: {
                 slidesPerView: 3,
-                spaceBetween: 15,
+                spaceBetween: 20,
               },
         }}
        
@@ -54,8 +54,10 @@ const Home = () => {
         pagination={{
             clickable: true
         }}
-        
-        modules={[FreeMode, Pagination]}
+        autoplay={
+            {delay: 2500}
+        }
+        modules={[FreeMode, Pagination, Autoplay]}
         className="max-w-[90%] mx-auto"
       >        
         {
@@ -65,7 +67,7 @@ const Home = () => {
 
                     
 
-<div className="card   w-96 mx-auto h-[500px]  bg-base-100  shadow-xl my-6">
+<div className="card    mx-auto h-[500px]  bg-base-100  shadow-xl my-6">
   <figure className="relative">
     <img src={estate.image} alt="Shoes" className="rounded-xl   transition duration-300 ease-in-out hover:scale-110 " />
     <span className="absolute top-2 left-2 bg-[#3E4C66] text-white  px-4 cursor-pointer">{estate.status}</span>

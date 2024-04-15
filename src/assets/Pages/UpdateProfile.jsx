@@ -1,5 +1,4 @@
 import {  updateProfile } from 'firebase/auth';
-
 import  { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
@@ -11,20 +10,22 @@ const UpdateProfile = () => {
   const {register, handleSubmit, setValue} = useForm();
   
 setValue('name', user?.displayName || '');
-setValue('photoURL', user.photoURL || ''  );
+setValue('photoURL', user?.photoURL || ''  );
 
   const handleUpdate = (data )=>{
     setLoading(true)
+   
     updateProfile(user, {
-      displayName: data.name,
+      displayName: data?.name,
       photoURL: data?.photoURL
     })
     .then(()=>{
       setLoading(false)
+      
       return toast.success("Profile Update successfully")
     })
     .catch((error)=>{
-      setLoading(false)
+      setLoading(true)
       return toast.error(error.message)
     })
   } 
@@ -36,10 +37,10 @@ setValue('photoURL', user.photoURL || ''  );
            <p className='text-center mb-6'>Need to update your profile? Here You can change your name and Photo.</p>
            <div className='shadow-xl'>
            <figure><img className='w-32 h-32 mx-auto rounded-full' src={user?.photoURL} alt="Movie"/></figure>
-  <h3 className=' md:text-2xl lg:text-2xl text-center '>Name: {user.displayName}</h3>
+  <h3 className=' md:text-2xl lg:text-2xl text-center '>Name: {user?.displayName}</h3>
   <div className='flex justify-center items-center gap-2 mt-2'>
   <TfiEmail className=''/>
-  <p className='text-center '> {user.email}</p>
+  <p className='text-center '> {user?.email}</p>
   </div>
   
  

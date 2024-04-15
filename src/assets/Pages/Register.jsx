@@ -11,7 +11,7 @@ const Register = () => {
   const [show, setShow] = useState(false)
   const acceptRef = useRef(null)
   const [accepted, setAccepted] = useState(false)
-  const {createUser, user, setReload} = useContext(AuthContext)
+  const {createUser, setLoading, setReload} = useContext(AuthContext)
   const navigate = useNavigate()
   
   //React Form - Hook codes

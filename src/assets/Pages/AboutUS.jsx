@@ -9,7 +9,7 @@ const AboutUS = () => {
   <div className="hero-content flex-col ">
     <img src="https://i.ibb.co/Yt929w9/7.jpg" className="rounded-lg shadow-2xl" />
     <div>
-      <h1 className="text-5xl font-bold">Heaven Home</h1>
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">Heaven Home</h1>
       <p className="py-3 list-decimal"> <span className="text-[18px] font-semibold">1.Introduction:</span> <br />At HeavenHome, we believe in making the journey of finding your dream home a heavenly experience. Founded with a passion for excellence and a commitment to serving our clients with integrity, we strive to redefine the real estate industry with innovation and dedication.</p>
       <p className="py-3 list-decimal"> <span className="text-[18px] font-semibold">2.Our Mission:</span> <br />Our mission at HeavenHome is simple yet profound - to empower individuals and families to discover the perfect place they can call home. We are dedicated to providing unparalleled service, personalized guidance, and access to a wide range of properties, ensuring that every client finds their slice of paradise.</p>
       <p className="py-3 list-decimal"> <span className="text-[18px] font-semibold">3.Who We Are:</span> <br />We are a team of passionate real estate experts, driven by a shared vision of transforming the way people find and experience their homes. With years of experience and a deep understanding of the market, we are here to guide you through every step of your real estate journey, from exploration to acquisition.</p>

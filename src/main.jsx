@@ -65,7 +65,7 @@ import Booked from './assets/Pages/WishList.jsx';
       element: <UserProfile/>
     },
      
-    {path: "/booked-estate", 
+    {path: "/wishlist", 
       element: <Booked/>
     }
   ]
