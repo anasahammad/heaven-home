@@ -15,6 +15,7 @@ import 'swiper/css/pagination';
 
 import { Autoplay, FreeMode, Pagination } from 'swiper/modules';
 import { CiLocationOn } from "react-icons/ci";
+import FAQ from "../../Components/FAQ";
 const Home = () => {
 
     const allEstates = useLoaderData()
@@ -121,7 +122,7 @@ const Home = () => {
             {/* <EstateCard/> */}
            
         </div>
-            
+          <FAQ/>
         </div>
     );
 };

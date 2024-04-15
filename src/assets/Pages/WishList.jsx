@@ -28,7 +28,7 @@ const WishList = () => {
         <div className="max-w-7xl mx-auto my-7 ">
 
           {wish.length === 0 & !loading ? <div className="h-screen flex justify-center items-center">
-           <p className="font-bold text-4xl text-center text-[#D23A25]">No Data Found!</p>
+           <p className="font-bold text-4xl text-center text-[#D23A25]">No Data Found! &#128546;</p>
           </div> :  <div className="flex flex-col gap-6 ">
             {wish?.map(item=> <div  key={item.id}> <div className="card relative gap-8 border lg:card-side ">
   <figure className="p-6 "><img src={item.image} alt="Album" className="lg:w-72 lg:h-72"/></figure>
