@@ -1,15 +1,24 @@
 
+import { useEffect, useState } from 'react';
 import { BsArrowUpRight } from 'react-icons/bs';
 import { CiLocationOn } from 'react-icons/ci';
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { saveEstate } from '../Utilities/LocalStorage';
+import useLocalStorage from '../Hooks/useLocalStorage';
 const EstateDetails = () => {
-    const allEstates = useLoaderData()
+    const {localData} = useLocalStorage()
  const {id} = useParams()
- const estate = allEstates.find(item=> item.id === parseInt(id))
- const {estate_title, segment_name, description, price, area, location, facilities, image, status} = estate;
-
+ const [singleWish, setSingleWish ] = useState([])
+ const estate = localData.find(item=> item.id === parseInt(id))
  
+ useEffect(()=>{
+    setSingleWish(estate);
+ }, [estate])
 
+ const {estate_title, segment_name, description, price, area, location, facilities, image, status} = singleWish || {};
+ const handleWish = data =>{
+    saveEstate(data)
+ }
     return (
         <div className='py-6 '>
            <div className="max-w-4xl mx-auto  p-4 shadow-md dark:bg-gray-50 dark:text-gray-800">
@@ -43,7 +52,7 @@ const EstateDetails = () => {
             <p className=' '><span className='font-bolod text-xl underline'>Facilities:</span>  <ul className='list-decimal ml-6'>
 
             
-{facilities.map((facility, index)=> <li key={index}>{facility}</li>)}
+{facilities?.map((facility, index)=> <li key={index}>{facility}</li>)}
 </ul></p>
             </div>
 
@@ -62,7 +71,7 @@ const EstateDetails = () => {
             </div>
 
                 <div className='flex justify-center'>
-                <Link to="/" className='btn bg-[#D23A25] text-white'>Go to Home <BsArrowUpRight/></Link>
+                <button onClick={()=>handleWish(estate)} className='btn bg-[#D23A25] text-white'>Add to Wishlist<BsArrowUpRight/></button>
                 </div>
             
 	</div>

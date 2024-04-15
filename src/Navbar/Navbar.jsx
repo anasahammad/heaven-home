@@ -31,6 +31,8 @@ const handleIsOpen = ()=>{
     <NavLink to="/contact-us"  className={({isActive})=> isActive ? "text-[#D23A25] font-bold" : ""  }>Contact Us</NavLink>
      {user && <NavLink to="/update-profile"  className={({isActive})=> isActive ? "text-[#D23A25] font-bold" : ""  }>Update Profile</NavLink>}
      {user && <NavLink to="/user-profile"  className={({isActive})=> isActive ? "text-[#D23A25] font-bold" : ""  }>User Profile</NavLink>}
+
+     <NavLink to="/booked-estate"  className={({isActive})=> isActive ? "text-[#D23A25] font-bold" : ""  }>Booked Estate</NavLink>
     </>
     return (
 

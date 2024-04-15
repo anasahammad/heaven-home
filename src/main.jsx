@@ -20,6 +20,7 @@ import PrivateRoutes from './PrivateRoutes/PrivateRoutes.jsx';
 import UpdateProfile from './assets/Pages/UpdateProfile.jsx';
 import UserProfile from './assets/Pages/UserProfile.jsx';
 import ErrorPage from './assets/Pages/ErrorPage.jsx';
+import Booked from './assets/Pages/WishList.jsx';
 
 
 
@@ -62,6 +63,10 @@ import ErrorPage from './assets/Pages/ErrorPage.jsx';
     }, 
     {path: "/user-profile", 
       element: <UserProfile/>
+    },
+     
+    {path: "/booked-estate", 
+      element: <Booked/>
     }
   ]
   }, 
