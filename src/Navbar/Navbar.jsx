@@ -8,12 +8,13 @@ import toast from "react-hot-toast";
 
 import { FaRegCircleUser } from "react-icons/fa6";
 import { IoMdHelpCircleOutline } from "react-icons/io";
+import Spinner from "../Components/Spinner";
 
 
 
 const Navbar = () => {
 const [isOpen, setIsOpen] = useState(false)
-
+const {loading} = useContext(AuthContext)
 const handleIsOpen = ()=>{
   setIsOpen(!isOpen)
 }
@@ -82,8 +83,7 @@ const handleIsOpen = ()=>{
   </div>
   <div className="navbar-end ">
   
-
-  {user? <div className="dropdown dropdown-end relative">
+ {loading ? <div><Spinner/></div> : (user)? <div className="dropdown dropdown-end relative">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar tooltip tooltip-warning   tooltip-left"    data-tip={user?.displayName} onClick={handleIsOpen}>
         <div className="w-10 rounded-full">
           <img alt="Tailwind CSS Navbar component" src={user?.photoURL ? user.photoURL : "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />
@@ -131,6 +131,8 @@ const handleIsOpen = ()=>{
         
       </ul>
     </div> : <Link to="/login" className="btn  bg-[#D23A25] text-white" ><FiLogIn/> Sign In</Link> }
+
+   
   
   
     {/* <Link to="/register" className="btn  bg-[#D23A25] text-white" ><FiLogIn/> Sign Up</Link> */}
