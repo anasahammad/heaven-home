@@ -10,7 +10,7 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Login = () => {
     const [show, setShow] = useState(false)
-    const {signInUser, googleSignIn, twitterSignIn, githubSignIn} = useContext(AuthContext)
+    const {signInUser, googleSignIn, twitterSignIn, githubSignIn, setLoading} = useContext(AuthContext)
     const navigate = useNavigate()
     const location = useLocation()
     const from = location?.state || "/";
@@ -29,11 +29,12 @@ const Login = () => {
         signInUser(email, password)
         .then(()=>{
           toast.success("Sign In Successfull")
-         
+          setLoading(false)
             navigate("/")
           
         })
         .catch(error=>{
+          setLoading(false)
           return toast.error(`${error.message.replace('Firebase: Error (auth/', ' ').replace(/\)/, '')}`)
         })
       }
@@ -42,10 +43,11 @@ const Login = () => {
         socialProvider()
         .then(()=>{
           toast.success("Sign In Successfull")
-          
+          setLoading(false)
           navigate(from)
         })
         .catch(error=>{
+          setLoading(false)
           return toast.error(`${error.message.replace('Firebase: Error (auth/', ' ').replace(/\)/, '')}`)
         })
       }
