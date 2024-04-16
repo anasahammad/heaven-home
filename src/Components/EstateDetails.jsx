@@ -41,7 +41,7 @@ const EstateDetails = () => {
 		</div>
 		<div className="space-y-2">
 			<a rel="noopener noreferrer" href="#" className="block">
-				<h3 className="text-2xl md:text-4xl lg:text-4xl font-bold dark:text-violet-600">{estate_title}</h3>
+				<h3 className="text-2xl md:text-4xl lg:text-4xl font-bold ">{estate_title}</h3>
 			</a>
             <h4 className='text-xl font-semibold'>Description:</h4>
 			<p className="leading-snug dark:text-gray-600">{description}</p>

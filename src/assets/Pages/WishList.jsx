@@ -25,7 +25,7 @@ const WishList = () => {
         }
      
     return (
-        <div className="max-w-7xl mx-auto my-7 ">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 my-7 ">
 
           {wish.length === 0 & !loading ? <div className="h-screen flex justify-center items-center">
            <p className="font-bold text-4xl text-center text-[#D23A25]">No Data Found! &#128546;</p>
@@ -42,7 +42,7 @@ const WishList = () => {
     <p className="text-xl md:text-2xl lg:text-2xl font-bold pr-6"><span>Area: </span>{item.area}</p>
     </div>
    
-    <div className="card-actions justify-center mb-3">
+    <div className="card-actions justify-center my-3">
       <Link to={`/details/${item.id}`} className="btn bg-[#D23A25] text-white">View Details</Link>
     </div>
   </div>

@@ -66,7 +66,7 @@ const handleIsOpen = ()=>{
         } */}
       </nav>
     </div>
-    <Link to="/" className="btn btn-ghost md:text-2xl lg:text-3xl">
+    <Link to="/" className="btn btn-ghost text-xl md:text-2xl lg:text-3xl">
        
         <span className="text-black"><span className="text-[#D23A25]">Heaven</span>Home</span>
 
@@ -89,7 +89,7 @@ const handleIsOpen = ()=>{
           <img alt="Tailwind CSS Navbar component" src={user?.photoURL ? user.photoURL : "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />
         </div>
       </div>
-      <ul tabIndex={0} className={`menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-32 md:w-60 lg:w-60 absolute top-full  ${
+      <ul tabIndex={0} className={`menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-40 md:w-60 lg:w-60 absolute top-full  ${
           isOpen ? '' : 'hidden'
         }`}>
 
