@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import logo from "../images/_e89d7921-bacb-47f3-8b92-077576e84a57.jpeg";
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Footer = () => {
+	const {user} = useContext(AuthContext)
     return (
         <div>
             <footer className="px-4 divide-y bg-base-200">
@@ -28,32 +31,41 @@ const Footer = () => {
 						<a rel="noopener noreferrer" href="#">Pricing</a>
 					</li>
 					<li>
-						<a rel="noopener noreferrer" href="#">FAQ</a>
+						<a rel="noopener noreferrer" href="#faq">FAQ</a>
 					</li>
 				</ul>
 			</div>
 			<div className="space-y-3">
-				<h3 className="tracking-wide uppercase dark:text-gray-900">Company</h3>
+				<h3 className="tracking-wide uppercase dark:text-gray-900">Important Links</h3>
 				<ul className="space-y-1">
 					<li>
-						<a rel="noopener noreferrer" href="#">Privacy</a>
+						<Link to="/">Home</Link>
 					</li>
 					<li>
-						<a rel="noopener noreferrer" href="#">Terms of Service</a>
+						<Link to="/about-us">About Us</Link>
 					</li>
+					<li>
+						<Link to="/contact-us">Contact Us</Link>
+					</li>
+					
+						{user && <>
+							<li><Link to="/wishlish">Wishlist</Link></li>
+							<li><Link to="/wishlish">Update Profile</Link></li>
+						</>}
+					
 				</ul>
 			</div>
 			<div className="space-y-3">
-				<h3 className="uppercase dark:text-gray-900">Developers</h3>
+				<h3 className="uppercase dark:text-gray-900">Company</h3>
 				<ul className="space-y-1">
 					<li>
-						<a rel="noopener noreferrer" href="#">Public API</a>
+						<a rel="noopener noreferrer" href="#">Terms and Condition</a>
 					</li>
 					<li>
-						<a rel="noopener noreferrer" href="#">Documentation</a>
+						<a rel="noopener noreferrer" href="#">Privacy and Policy</a>
 					</li>
 					<li>
-						<a rel="noopener noreferrer" href="#">Guides</a>
+						<a rel="noopener noreferrer" href="#">Helpline</a>
 					</li>
 				</ul>
 			</div>
