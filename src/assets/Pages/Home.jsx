@@ -92,7 +92,7 @@ const Home = () => {
 
        <div className="flex-grow">
        <div className="flex  justify-center">
-<Link to={`/details/${estate.id}`}>
+<Link to={`/details/${estate.id}`} state={estate.estate_title}>
 <button className="btn bg-[#D23A25]  text-white">Vew Details</button>
 </Link>
       

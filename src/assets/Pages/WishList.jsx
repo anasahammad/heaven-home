@@ -47,7 +47,8 @@ const WishList = () => {
     </div>
   </div>
   <div className="absolute -right-4 text-red-700 -top-4">
-    <button onClick={()=>handleDelet(item.id)}><TiDeleteOutline className="w-10 h-10"></TiDeleteOutline></button>
+    
+    <button  onClick={()=>handleDelet(item.id)}><TiDeleteOutline className="w-10 h-10"></TiDeleteOutline></button>
         
   </div>
 </div></div>)}
