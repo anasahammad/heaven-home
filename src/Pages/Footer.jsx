@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+
 
 const Footer = () => {
 	const {user} = useContext(AuthContext)

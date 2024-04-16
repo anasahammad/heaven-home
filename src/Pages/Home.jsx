@@ -1,7 +1,6 @@
-import AboutCompany from "../../Components/AboutCompany";
-
-import OurMission from "../../Components/OurMission";
-import AllSlides from "../../Sliders/AllSlides";
+import AboutCompay from "../Components/AboutCompany"
+import OurMission from "../Components/OurMission";
+import AllSlides from "../Sliders/AllSlides";
 import { Link, useLoaderData } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -15,7 +14,7 @@ import 'swiper/css/pagination';
 
 import { Autoplay, FreeMode, Pagination } from 'swiper/modules';
 import { CiLocationOn } from "react-icons/ci";
-import FAQ from "../../Components/FAQ";
+import FAQ from "../Components/FAQ";
 const Home = () => {
 
     const allEstates = useLoaderData()
@@ -26,7 +25,7 @@ const Home = () => {
             
         <AllSlides/>
            
-        <AboutCompany/>
+        <AboutCompay/>
         <OurMission/>
 
         <div  id="estates" className="py-10">

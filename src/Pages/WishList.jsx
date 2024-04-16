@@ -1,8 +1,9 @@
 import { useContext, useEffect, useState } from "react";
-import { deletEstate, getEstate } from "../../Utilities/LocalStorage";
+import { deletEstate, getEstate } from "../Utilities/LocalStorage";
 import { Link } from "react-router-dom";
 import { TiDeleteOutline } from "react-icons/ti";
-import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+
 
 
 const WishList = () => {

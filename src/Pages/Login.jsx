@@ -1,10 +1,11 @@
 import { useContext,  useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../AuthProvider/AuthProvider";
+
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import Spinner from "../../Components/Spinner";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+
 
 
 const Login = () => {

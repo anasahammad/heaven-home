@@ -1,9 +1,10 @@
 import {  updateProfile } from 'firebase/auth';
 import  { useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import { AuthContext } from '../../AuthProvider/AuthProvider';
+
 import toast from 'react-hot-toast';
 import { TfiEmail } from "react-icons/tfi";
+import { AuthContext } from '../AuthProvider/AuthProvider';
 
 const UpdateProfile = () => {
  const {user, setLoading} = useContext(AuthContext)
