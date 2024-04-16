@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import logo from "../images/_e89d7921-bacb-47f3-8b92-077576e84a57.jpeg";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
@@ -12,9 +11,9 @@ const Footer = () => {
 		<div className="lg:w-1/3">
 			<a rel="noopener noreferrer" href="#" className="flex justify-center space-x-3 lg:justify-start">
 				<div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-violet-600">
-					<img src={logo} alt="" />
+					
 				</div>
-				<span className="self-center text-2xl font-semibold">HeavenHome</span>
+				<span className="text-black md:text-2xl lg:text-3xl font-semibold"><span className="text-[#D23A25]">Heaven</span>Home</span>
 			</a>
 		</div>
 		<div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">

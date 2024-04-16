@@ -5,7 +5,7 @@ const AboutUS = () => {
 
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen ">
   <div className="hero-content flex-col ">
     <img  src="https://i.ibb.co/Yt929w9/7.jpg" className="rounded-lg shadow-2xl" />
     <div>

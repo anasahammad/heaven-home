@@ -1,12 +1,16 @@
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 
 
 const ContactUs = () => {
-    const handleSubmit = event =>{
-        event.preventDefault()
-        const fullName = event.target.name.value;
-        const email = event.target.email.value;
-        const message = event.target.message.value;
-        console.log(fullName, email, message)
+
+	const [userName, setUserName] = useState('')
+	const {register,  handleSubmit,formState: { errors },} = useForm()
+	
+    const handleMessage = data =>{
+        const {fullName, email, message} = data;
+        setUserName(fullName);
+		document.getElementById('my_modal_5').showModal();
     }
     return (
         <div>
@@ -18,10 +22,13 @@ const ContactUs = () => {
 		</div>
 		<img src="https://mambaui.com/assets/svg/doodle.svg" alt="" className="p-6 h-52 md:h-64 " />
 	</div>
-	<form onSubmit={handleSubmit} noValidate="" className="space-y-6">
+	<form onSubmit={handleSubmit(handleMessage)} noValidate="" className="space-y-6">
 		<div>
 			<label htmlFor="name" className="text-sm">Full name</label>
-			<input id="name" type="text" name="fullName" placeholder="" className="w-full p-3 rounded input input-bordered" />
+			<input {...register("fullName", {
+				required: true
+			})} id="name" type="text" name="fullName" placeholder="" className="w-full p-3 rounded input input-bordered" />
+			{errors.fullName && <span className="text-red-600">This field is required</span>}
 		</div>
 		<div>
 			<label htmlFor="email" className="text-sm">Email</label>
@@ -31,7 +38,19 @@ const ContactUs = () => {
 			<label htmlFor="message" className="text-sm">Message</label>
 			<textarea id="message" name="message" rows="3" className="w-full p-3 rounded border input-bordered"></textarea>
 		</div>
-		<button type="submit" className="w-full p-3 text-sm font-bold tracking-wide uppercase rounded bg-[#D23A25] text-white">Send Message</button>
+		<button  type="submit" className="w-full p-3 text-sm font-bold tracking-wide uppercase rounded bg-[#D23A25] text-white">Send Message</button>
+		<dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+  <div className="modal-box">
+    <h3 className="font-bold text-lg">Hello, <span className="text-2xl">{userName}</span></h3>
+    <p className="py-4">We got your message. Thanks for your messaging us. We will connect with you soon as possible. Please stay with us.</p>
+    <div className="modal-action">
+      <form method="dialog">
+        {/* if there is a button in form, it will close the modal */}
+        <button className="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
 	</form>
 </div>
         </div>

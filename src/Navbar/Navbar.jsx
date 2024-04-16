@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from "../assets/images/_e89d7921-bacb-47f3-8b92-077576e84a57.jpeg"
+
 import { FiLogIn, FiLogOut } from "react-icons/fi";
 import { useContext, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
@@ -67,8 +67,8 @@ const handleIsOpen = ()=>{
       </nav>
     </div>
     <Link to="/" className="btn btn-ghost md:text-2xl lg:text-3xl">
-        <img className="w-10 h-10 bg-none" src={logo} alt="" />
-        <span className="text-black">HeavenHome</span>
+       
+        <span className="text-black"><span className="text-[#D23A25]">Heaven</span>Home</span>
 
     </Link>
   </div>
