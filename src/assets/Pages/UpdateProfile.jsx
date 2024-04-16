@@ -32,7 +32,7 @@ setValue('photoURL', user?.photoURL || ''  );
     return (
         <div>
           
-           <div className="card max-w-3xl mx-auto my-6 ">
+           <div data-aos="fade-left" data-aos-duration="1000"  data-aos-delay="500" className="card max-w-3xl mx-auto my-6 ">
            <h className="text-2xl md:text-3xl lg:text-3xl text-center mb-2">Update your profile</h>
            <p className='text-center mb-6'>Need to update your profile? Here You can change your name and Photo.</p>
            <div className='shadow-xl'>

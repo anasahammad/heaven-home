@@ -56,11 +56,11 @@ const Login = () => {
           <div className="">
   <div className="hero-content mx-auto flex-col ">
     <div className="text-center ">
-      <h1 className="text-4xl font-bold mb-2">Sign In </h1>
-     <p>Welcome back! Log in to your account to access all the features.</p>
+      <h1 data-aos="fade-down" className="text-4xl font-bold mb-2">Sign In </h1>
+     <p data-aos="fade-left">Welcome back! Log in to your account to access all the features.</p>
       
     </div>
-    <div className="card   shrink-0 w-full  max-w-[30rem] shadow-2xl">
+    <div data-aos="fade-up" data-aos-delay="500" className="card   shrink-0 w-full  max-w-[30rem] shadow-2xl">
         
       <form onSubmit={handleSubmit(handleSignIn)} className="card-body">
         <div className="form-control">

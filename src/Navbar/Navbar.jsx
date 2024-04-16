@@ -31,6 +31,7 @@ const handleIsOpen = ()=>{
      {user && <>
       <NavLink to="/wishlist"  className={({isActive})=> isActive ? "text-[#D23A25] font-bold" : ""  }>Wishlist</NavLink>
       <NavLink to="/update-profile"  className={({isActive})=> isActive ? "text-[#D23A25] font-bold" : ""  }>Update Profile</NavLink>
+      
      
      </>}
 

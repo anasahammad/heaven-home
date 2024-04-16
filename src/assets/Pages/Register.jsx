@@ -68,11 +68,11 @@ const Register = () => {
            <div className=" ">
   <div className="hero-content mx-auto flex-col ">
     <div className="text-center ">
-      <h1 className="text-4xl font-bold mb-2 ">Create an account</h1>
-      <p>Ready to get started? It's time to fill out the form and create your account. </p>
+      <h1 data-aos="fade-down" className="text-4xl font-bold mb-2 ">Create an account</h1>
+      <p data-aos="fade-left">Ready to get started? It's time to fill out the form and create your account. </p>
       
     </div>
-    <div className="card shrink-0 w-full mx-auto max-w-[30rem] shadow-2xl ">
+    <div data-aos="fade-up" data-aos-delay="500" className="card shrink-0 w-full mx-auto max-w-[30rem] shadow-2xl ">
       <form onSubmit={handleSubmit(handleRegister)} className="card-body gap-4">
         <div className="form-control">
         <label className="label">

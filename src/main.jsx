@@ -19,6 +19,7 @@ import { Toaster } from 'react-hot-toast';
 import PrivateRoutes from './PrivateRoutes/PrivateRoutes.jsx';
 import UpdateProfile from './assets/Pages/UpdateProfile.jsx';
 
+
 import ErrorPage from './assets/Pages/ErrorPage.jsx';
 import Booked from './assets/Pages/WishList.jsx';
 

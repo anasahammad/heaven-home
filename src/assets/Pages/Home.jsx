@@ -29,7 +29,7 @@ const Home = () => {
         <AboutCompany/>
         <OurMission/>
 
-        <div id="estates" className="py-10">
+        <div  id="estates" className="py-10">
             <div className="text-center">
             <h1 className="text-4xl font-bold mb-4">Featured Properties</h1>
             <p >Handpicked properties by our team</p>
@@ -68,7 +68,7 @@ const Home = () => {
 
                     
 
-<div className="card    mx-auto h-[500px]  bg-base-100  shadow-xl my-6">
+<div data-aos="fade-up" className="card    mx-auto h-[500px]  bg-base-100  shadow-xl my-6">
   <figure className="relative">
     <img src={estate.image} alt="Shoes" className="rounded-xl   transition duration-300 ease-in-out hover:scale-110 " />
     <span className="absolute top-2 left-2 bg-[#3E4C66] text-white  px-4 cursor-pointer">{estate.status}</span>
