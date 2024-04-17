@@ -34,7 +34,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/contact-us",
-        element: <ContactUs/>
+        element: <PrivateRoutes><ContactUs/></PrivateRoutes> 
       },
       {
         path: "/login",
